@@ -122,7 +122,7 @@
         android:id="@+id/prodNameInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_condensed_bold"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:text="Names"
         android:textColor="@color/kabbablue"
         android:textSize="18sp"
@@ -158,14 +158,13 @@
         <EditText
             android:id="@+id/prodBeschreibung"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:singleLine="false"
             android:text="Für den Outdoor-Sessel Forest wurde traditionelle Handwerkskunst mit modernster Technologie kombiniert. Der Armlehnstuhl von Fast ist aus pulverbeschichtetem Aluminium gefertigt und weist eine verästeltete Struktur der Sitzschale auf. Die Assoziation mit einem Wald engl. Forest liegt also nahe."
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="15sp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -209,7 +208,7 @@
                 android:background="@drawable/custom_button_background"
                 android:button="@android:color/transparent"
                 android:checked="false"
-                android:text="bl" />
+                android:text="exp" />
 
         </LinearLayout>
 
@@ -220,8 +219,8 @@
 
             <TextView
                 android:id="@+id/prodPriceInfo"
-                android:layout_width="106dp"
-                android:layout_height="41dp"
+                android:layout_width="67dp"
+                android:layout_height="24dp"
                 android:fontFamily="@font/roboto_condensed_bold"
                 android:text="prodPrice"
                 android:textColor="@color/teal_700"
@@ -235,8 +234,8 @@
 
             <Button
                 android:id="@+id/addButton"
-                android:layout_width="232dp"
-                android:layout_height="51dp"
+                android:layout_width="244dp"
+                android:layout_height="55dp"
                 android:background="@drawable/radius"
                 android:fontFamily="@font/roboto_condensed_bold"
                 android:text="@string/addButton"

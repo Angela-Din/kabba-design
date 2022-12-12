@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         featuredProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent to_proddet = new Intent(getApplicationContext(), ProductDetails.class);
+                Intent to_proddet = new Intent(getApplicationContext(), Aktionen.class);
                 startActivity(to_proddet);
             }
         });

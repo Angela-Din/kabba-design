@@ -13,8 +13,9 @@
         app:showAsAction="always"/>
 
     <item android:id="@+id/nav_account"
-        android:title="My Account"
+        android:title="Mein Konto"
         android:icon="@drawable/ic_baseline_tag_faces_24"
-        app:showAsAction="collapseActionView"/>
+        app:showAsAction="collapseActionView"
+        />
 
 </menu>

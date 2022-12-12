@@ -1,7 +1,5 @@
 package com.meineapp.kabbamobeldesign;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +8,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ProductDetails extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Aktionen extends AppCompatActivity {
 
     private TextView prodNameInfo, prodPriceInfo;
     private EditText prodBeschreibung;
@@ -29,18 +29,11 @@ public class ProductDetails extends AppCompatActivity {
         imageInfo = (ImageView) findViewById(R.id.imageInfo);
         addButton = (Button) findViewById(R.id.addButton);
 
-        Intent intentIN = getIntent();
-        prodNameInfo.setText(intentIN.getStringExtra("name"));
-        prodPriceInfo.setText(intentIN.getStringExtra("preis"));
-        prodBeschreibung.setText(intentIN.getStringExtra("beschreibung"));
-        imageInfo.setImageResource(intentIN.getIntExtra("image",0));
-
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent zuruckWarenkorb = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(zuruckWarenkorb);
-
             }
         });
 

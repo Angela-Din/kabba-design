@@ -1,6 +1,7 @@
 package com.meineapp.kabbamobeldesign.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.LayerDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.meineapp.kabbamobeldesign.Entities.Product;
+import com.meineapp.kabbamobeldesign.ProductDetails;
 import com.meineapp.kabbamobeldesign.R;
 
 import java.util.ArrayList;
@@ -39,7 +41,7 @@ public class ProductAdapter extends BaseAdapter {
         return i;
     }
 
-    @Override     //This method recalls a for loop, will iterate through array lenght
+    @Override     //This method recalls a for loop, will iterate through array length
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater myLayoutInflater = LayoutInflater.from(this.context);
         view = myLayoutInflater.inflate(R.layout.product_template, null); //Here product template is referenced/
@@ -55,6 +57,18 @@ public class ProductAdapter extends BaseAdapter {
         prodName.setText(product.getName());
         prodDescription.setText(product.getBeschreibung());
         prodPrice.setText(product.getPreis());
+
+        imageRef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent produktDetails = new Intent(context.getApplicationContext(), ProductDetails.class);
+                produktDetails.putExtra("image", product.getImageRef());
+                produktDetails.putExtra("name", product.getName());
+                produktDetails.putExtra("beschreibung", product.getBeschreibung());
+                produktDetails.putExtra("preis", product.getPreis());
+                context.startActivity(produktDetails);
+            }
+        });
 
         return view;
     }
