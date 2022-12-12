@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kabba Möbel Store</string>
+
+    //Main Activity's Strings
+    <string name="txtTopCopy">Einfach die besten möbel</string>
+    <string name="prodCategories">Jetzt Entdecken</string>
+    <string name="searchBar">Suchbegriff</string>
+    <string name="giftButton">20% OFF!</string>
+
+
+    // Catalogue's Strings
+
+    <string name="prodDetails">Detail</string>
+    <string name="colors">Farben</string>
+    <string name="addButton">In den Warenkorb</string>
+
+
+    
+</resources>
