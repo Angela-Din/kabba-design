@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/prodImage"
+            android:id="@+id/editImage"
             android:layout_width="212dp"
             android:layout_height="250dp"
             tools:srcCompat="@tools:sample/avatars" />
@@ -34,7 +34,7 @@
             android:layout_height="258dp">
 
             <TextView
-                android:id="@+id/prodName"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_condensed_bold"
@@ -49,7 +49,7 @@
                 app:layout_constraintVertical_bias="0.242" />
 
             <TextView
-                android:id="@+id/prodShortD"
+                android:id="@+id/txtBeschreibung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_condensed_regular"
@@ -62,7 +62,7 @@
                 app:layout_constraintVertical_bias="0.548" />
 
             <TextView
-                android:id="@+id/prodPrice"
+                android:id="@+id/txtPreis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_condensed_bold"

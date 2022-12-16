@@ -5,17 +5,24 @@
     <item android:id="@+id/nav_share"
         android:title="Share"
         android:icon="@drawable/ic_outline_share_24"
-        app:showAsAction="always"/>
+        app:showAsAction="collapseActionView"/>
+
+    <item android:id="@+id/nav_account"
+        android:title="Mein Konto"
+        android:icon="@drawable/ic_baseline_tag_faces_24"
+        app:showAsAction="always"
+        />
 
     <item android:id="@+id/nav_cart"
         android:title="Checkout"
         android:icon="@drawable/ic_outline_shopping_cart_24"
         app:showAsAction="always"/>
 
-    <item android:id="@+id/nav_account"
-        android:title="Mein Konto"
-        android:icon="@drawable/ic_baseline_tag_faces_24"
-        app:showAsAction="collapseActionView"
-        />
+    <item android:id="@+id/nav_admin"
+        android:title="Admin Panel"
+        android:icon="@drawable/ic_baseline_admin_panel_settings_24"
+        app:showAsAction="withText"/>
+
+
 
 </menu>

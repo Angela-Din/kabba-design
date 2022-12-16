@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984535795380",
+    "project_id": "kabba-design",
+    "storage_bucket": "kabba-design.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984535795380:android:07dbd873710a5a50ab79e1",
+        "android_client_info": {
+          "package_name": "com.meineapp.kabbamobeldesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984535795380-bn1ucpv4o5juhql9khthq2m3ff7lbv76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1i_WrSn9V3M2Q5LbUZtfTxb4Ki70STks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984535795380-bn1ucpv4o5juhql9khthq2m3ff7lbv76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
