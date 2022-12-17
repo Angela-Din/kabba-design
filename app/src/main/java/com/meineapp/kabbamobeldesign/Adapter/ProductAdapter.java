@@ -45,22 +45,22 @@ public class ProductAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
-        return arrayProducts.get(i);
+    public Object getItem(int position) {
+        return arrayProducts.get(position);
     }
 
     @Override
-    public long getItemId(int i) {
-        return i;
+    public long getItemId(int position) {
+        return 0;
     }
 
     @Override     //This method recalls a for loop, will iterate through array length
 
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int position, View view, ViewGroup viewGroup) {
         LayoutInflater myLayoutInflater = LayoutInflater.from(this.context);
         view = myLayoutInflater.inflate(R.layout.product_template, null); //Here product template is referenced/
 
-        Product product = arrayProducts.get(i);
+        Product product = arrayProducts.get(position);
 
         ImageView imageRef = (ImageView) view.findViewById(R.id.editImage);
         TextView prodName = (TextView) view.findViewById(R.id.txtName);
