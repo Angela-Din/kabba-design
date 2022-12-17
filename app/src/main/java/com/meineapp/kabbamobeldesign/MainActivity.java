@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
         firestore_db = new Firestore_DB();
 
         //************ ok, let's generate products arrays **********************//
-        //Product produkt2 = new Product("Egg/ Das Ei™ Loungesessel Stoff", "Der Egg Chair wurde 1958 von Arne Jacobsen entworfen - Das Ei ist ein echter Designklassiker! Den berühmten Loungesessel mit Stoff-Bezug vertreibt Fritz Hansen.", "6.760,00", R.drawable.fritzhansenegg);
-        //productArrayList.add(produkt2);
-        //firestore_db.insertData(produkt2);
         /*
         Product produkt1 = new Product("Forest Gartenarmlehnstuhl", "Für den Outdoor-Sessel Forest wurde traditionelle Handwerkskunst mit modernster Technologie kombiniert.", "530,00", R.drawable.forestgartenarmlehnstuhl);
         Product produkt2 = new Product("Egg/ Das Ei™ Loungesessel Stoff", "Der Egg Chair wurde 1958 von Arne Jacobsen entworfen - Das Ei ist ein echter Designklassiker! Den berühmten Loungesessel mit Stoff-Bezug vertreibt Fritz Hansen.", "6.760,00", R.drawable.fritzhansenegg);
@@ -106,12 +103,20 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.kabbaactionbar, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_CRUD:
+                Intent to_crud = new Intent(getApplicationContext(), NeuesProdukt.class);
+                startActivity(to_crud);
+                return true;
+            case R.id.action_login:
+                //startSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
-
-
 }
 

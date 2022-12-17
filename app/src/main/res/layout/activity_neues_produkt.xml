@@ -16,12 +16,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/editIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Image"
+            android:inputType="numberDecimal"
+            android:textAlignment="gravity" />
+
         <ImageView
             android:id="@+id/editImage"
-            android:layout_width="260dp"
-            android:layout_height="260dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:visibility="visible"
+            tools:srcCompat="@drawable/upload_image_kb" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,21 +56,22 @@
                     app:layout_constraintHorizontal_bias="0.164"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.193" />
+                    app:layout_constraintVertical_bias="0.327" />
 
                 <TextView
                     android:id="@+id/txtBeschreibung"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_condensed_regular"
+                    android:fontFamily="@font/roboto_condensed_bold"
                     android:text="Beschreibung"
+                    android:textColor="@color/kabbablue"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintHorizontal_bias="0.347"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.548" />
+                    app:layout_constraintVertical_bias="0.605" />
 
                 <TextView
                     android:id="@+id/txtPreis"
@@ -74,10 +84,26 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.122"
+                    app:layout_constraintHorizontal_bias="0.16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.832" />
+                    app:layout_constraintVertical_bias="0.894" />
+
+                <TextView
+                    android:id="@+id/editId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_condensed_bold"
+                    android:gravity="center"
+                    android:text="ID"
+                    android:textColor="@color/kabbablue"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.132"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.067" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -87,44 +113,48 @@
 
                 <EditText
                     android:id="@+id/editPreis"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="196dp"
+                    android:layout_height="51dp"
                     android:layout_marginTop="2dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto_condensed_regular"
+                    android:hint="Edit Produktpreis"
                     android:inputType="textPersonName"
-                    android:text="Produktpreis"
+                    android:textColor="@android:color/tertiary_text_light"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editBeschreibung"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.967" />
 
                 <EditText
                     android:id="@+id/editBeschreibung"
-                    android:layout_width="187dp"
-                    android:layout_height="115dp"
+                    android:layout_width="193dp"
+                    android:layout_height="92dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto_condensed_regular"
+                    android:hint="Edit Produktbeschreibung"
                     android:inputType="textPersonName"
-                    android:text="Produktbeschreibung"
+                    android:textColor="@android:color/tertiary_text_light"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.625" />
 
                 <EditText
                     android:id="@+id/editName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="191dp"
+                    android:layout_height="59dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto_condensed_regular"
+                    android:hint="Edit Produktname"
                     android:inputType="textPersonName"
-                    android:text="Produktname"
+                    android:textColor="@android:color/tertiary_text_light"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editBeschreibung"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +162,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
+
+                <EditText
+                    android:id="@+id/editID"
+                    android:layout_width="183dp"
+                    android:layout_height="41dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_condensed_regular"
+                    android:inputType="textPersonName"
+                    android:text="Produkt Id"
+                    android:textColor="@android:color/tertiary_text_light"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/editBeschreibung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.032" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
