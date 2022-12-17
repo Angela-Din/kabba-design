@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         firestore_db = new Firestore_DB();
 
         //************ ok, let's generate products arrays **********************//
+        //Product produkt4 = new Product("Vitra.", "Hier kombinieren Sie die futuristische Gestalt des raffinierten Eames Plastic Chairs mit der komfortablen Natürlichkeit eines hochwertigen Lammfells.", "529,00", R.drawable.vitraaktionsseteameslammfell1800);
+        //Product produkt5 = new Product("Clizia Mama Non Mama Pendelleuchte S", "Die Clizia Mama Non Mama Pendelleuchte S wurde von Adriano Rachele für die Marke Slamp entworfen.", "€ 314,00", R.drawable.slampclizia);
+        //productArrayList.add(produkt4);
+        //productArrayList.add(produkt5);
+        //firestore_db.insertData(produkt4);
+        //firestore_db.insertData(produkt5);
         /*
         Product produkt1 = new Product("Forest Gartenarmlehnstuhl", "Für den Outdoor-Sessel Forest wurde traditionelle Handwerkskunst mit modernster Technologie kombiniert.", "530,00", R.drawable.forestgartenarmlehnstuhl);
         Product produkt2 = new Product("Egg/ Das Ei™ Loungesessel Stoff", "Der Egg Chair wurde 1958 von Arne Jacobsen entworfen - Das Ei ist ein echter Designklassiker! Den berühmten Loungesessel mit Stoff-Bezug vertreibt Fritz Hansen.", "6.760,00", R.drawable.fritzhansenegg);
@@ -94,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
         productAdapter = new ProductAdapter(this, productArrayList);
         prodListView.setAdapter(productAdapter);
 
-        firestore_db.getData(productAdapter);
+        firestore_db.getData(productAdapter, productArrayList);
+
 
     }
 

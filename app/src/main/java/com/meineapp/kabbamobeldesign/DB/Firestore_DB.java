@@ -27,12 +27,10 @@ public class Firestore_DB {
 
     public Firestore_DB(){
         this.db = FirebaseFirestore.getInstance();
-        //CollectionReference myservice = db.collection("produkts");
     }
 
     public void insertData (Product product){
         //Create a Hashmap to insert product data
-
         Map<String, Object> produkt = new HashMap<>();
         produkt.put("image", product.getImageRef());
         produkt.put("name", product.getName());
@@ -43,7 +41,7 @@ public class Firestore_DB {
         db.collection("produkts").add(produkt);
     }
 
-    public void getData(ProductAdapter adapter){
+    public void getData(ProductAdapter adapter, ArrayList<Product> list){
         db.collection("produkts")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -74,13 +72,13 @@ public class Firestore_DB {
     public void deleteData(String id){
         db.collection("produkts").document(id)
                 .delete()
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                .addOnSuccessListener(new OnSuccessListener<Void>() {   //callback 1
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d(ContentValues.TAG, "DocumentSnapshot successfully deleted!");
                     }
                 })
-                .addOnFailureListener(new OnFailureListener() {
+                .addOnFailureListener(new OnFailureListener() {    //callback2
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.w(ContentValues.TAG, "Error deleting document", e);

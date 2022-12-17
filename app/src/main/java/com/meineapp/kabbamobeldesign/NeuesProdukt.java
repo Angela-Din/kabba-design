@@ -46,9 +46,6 @@ public class NeuesProdukt extends AppCompatActivity {
                 );
 
                 firestore_db.insertData(product);
-                Toast.makeText(getApplicationContext(),
-                        "Neues Produkt!",
-                        Toast.LENGTH_LONG);
                 Intent toMain = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(toMain);
 
